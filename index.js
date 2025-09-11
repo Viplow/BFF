@@ -13,7 +13,7 @@ app.use(cors());
 app.use('/widgets', express.static(path.resolve('./widgets')));
 
 // Serve the root directory (for demo.html and ssr-demo.html)
-// const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // app.use(express.static(__dirname));
 
 // Serve demo.html at /demo
