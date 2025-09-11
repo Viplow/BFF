@@ -1,14 +1,20 @@
 
+
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 app.use(cors());
 
 // Serve widgets as static files
 app.use('/widgets', express.static(path.resolve('./widgets')));
+
+// Serve the root directory (for demo.html and ssr-demo.html)
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+app.use(express.static(__dirname));
 
 // SSR: Product Card
 app.get('/ssr/product-card', async (req, res) => {
