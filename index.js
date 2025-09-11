@@ -13,8 +13,18 @@ app.use(cors());
 app.use('/widgets', express.static(path.resolve('./widgets')));
 
 // Serve the root directory (for demo.html and ssr-demo.html)
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-app.use(express.static(__dirname));
+// const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// app.use(express.static(__dirname));
+
+// Serve demo.html at /demo
+app.get('/demo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'demo.html'));
+});
+
+// Serve ssr-demo.html at /ssrdemo
+app.get('/ssrdemo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'ssr-demo.html'));
+});
 
 // SSR: Product Card
 app.get('/ssr/product-card', async (req, res) => {
