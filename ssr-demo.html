@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BFF CaaS SSR Demo (SEO Test)</title>
+  <meta name="description" content="Server-side rendered widgets for SEO demonstration.">
+  <script src="https://bff-isbk.onrender.com/widgets/product-card.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/user-profile.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/product-list.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/notification-banner.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/stat-card.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/info-card.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/progress-bar.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 2em; }
+    h1 { margin-bottom: 0.5em; }
+    .demo-section { margin-bottom: 2em; }
+    .row { display: flex; gap: 2em; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <h1>BFF SSR Component Demo (SEO Friendly)</h1>
+
+  <!-- SSR: Product Card (HTML markup for SEO) -->
+  <div class="demo-section">
+    <h2>Product Card (SSR)</h2>
+    <div class="product-card">
+      <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9b6e2e2e-2e7e-4e2e-8e2e-2e7e4e2e8e2e/air-zoom.jpg" alt="Nike Air Zoom" style="width:100px;height:100px;object-fit:contain;" />
+      <h2>Nike Air Zoom</h2>
+      <p>In stock • 4.5 ★</p>
+      <strong>$120</strong>
+    </div>
+  </div>
+
+  <!-- SSR: User Profile -->
+  <div class="demo-section">
+    <h2>User Profile (SSR)</h2>
+    <div class="user-profile">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alice Johnson" style="width:80px;height:80px;border-radius:50%;" />
+      <h3>Alice Johnson</h3>
+      <p>alice@example.com</p>
+      <span>New York, USA</span>
+    </div>
+  </div>
+
+  <!-- SSR: Product List -->
+  <div class="demo-section">
+    <h2>Product List (SSR)</h2>
+    <ul class="product-list">
+      <li>
+        <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9b6e2e2e-2e7e-4e2e-8e2e-2e7e4e2e8e2e/air-zoom.jpg" alt="Nike Air Zoom" style="width:40px;height:40px;object-fit:contain;vertical-align:middle;" />
+        <span>Nike Air Zoom</span> - <strong>$120</strong>
+      </li>
+      <li>
+        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e_9366/Ultraboost_21_Shoes_White_FY0377_01_standard.jpg" alt="Adidas Ultraboost" style="width:40px;height:40px;object-fit:contain;vertical-align:middle;" />
+        <span>Adidas Ultraboost</span> - <strong>$140</strong>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SSR: Info Card -->
+  <div class="demo-section">
+    <h2>Info Card (SSR)</h2>
+    <div class="info-card" style="background:#f9f9f9;border-radius:8px;box-shadow:0 2px 8px #eee;padding:18px 20px;min-width:180px;border-left:4px solid #2196f3;margin-bottom:1em;">
+      <span class="icon" style="font-size:1.5em;">ℹ️</span>
+      <div class="title" style="font-size:1.1em;font-weight:bold;margin-bottom:4px;">Info</div>
+      <div class="content" style="color:#555;font-size:0.98em;">This is an informational card rendered on the server for SEO.</div>
+    </div>
+  </div>
+
+  <!-- SSR: Progress Bar -->
+  <div class="demo-section">
+    <h2>Progress Bar (SSR)</h2>
+    <div class="progress-container" style="width:100%;background:#eee;border-radius:8px;padding:8px;box-sizing:border-box;">
+      <div class="label" style="font-size:0.98em;color:#555;margin-bottom:4px;">Loading <span class="percent" style="font-size:0.95em;color:#888;margin-left:8px;">70%</span></div>
+      <div class="bar-bg" style="width:100%;background:#ddd;border-radius:6px;height:18px;overflow:hidden;">
+        <div class="bar" style="height:18px;background:#2196f3;width:70%;transition:width 0.4s;border-radius:6px;"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BFF CaaS Demo</title>
+  <!-- Import widgets from your BFF server -->
+  <script src="https://bff-isbk.onrender.com/widgets/product-card.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/user-profile.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/product-list.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/notification-banner.js"></script>
+  <script src="https://bff-isbk.onrender.com/widgets/stat-card.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 2em; }
+    h1 { margin-bottom: 0.5em; }
+    .demo-section { margin-bottom: 2em; }
+    .row { display: flex; gap: 2em; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <h1>BFF Component-as-a-Service Demo</h1>
+
+  <div class="demo-section">
+    <h2>Product Card</h2>
+    <product-card
+      title="Nike Air Zoom"
+      subtitle="In stock • 4.5 ★"
+      image="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9b6e2e2e-2e7e-4e2e-8e2e-2e7e4e2e8e2e/air-zoom.jpg"
+      price="$120">
+    </product-card>
+  </div>
+
+  <div class="demo-section">
+    <h2>User Profile</h2>
+    <user-profile
+      name="Alice Johnson"
+      email="alice@example.com"
+      avatar="https://randomuser.me/api/portraits/women/44.jpg"
+      location="New York, USA">
+    </user-profile>
+  </div>
+
+  <div class="demo-section">
+    <h2>Product List</h2>
+    <product-list
+      products='[{"id":1,"title":"Nike Air Zoom","price":120,"image":"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9b6e2e2e-2e7e-4e2e-8e2e-2e7e4e2e8e2e/air-zoom.jpg"},{"id":2,"title":"Adidas Ultraboost","price":140,"image":"https://assets.adidas.com/images/w_600,f_auto,q_auto/1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e_9366/Ultraboost_21_Shoes_White_FY0377_01_standard.jpg"}]'>
+    </product-list>
+  </div>
+
+  <div class="demo-section">
+    <h2>Notification Banner</h2>
+    <notification-banner type="success" message="Your order has been placed successfully!"></notification-banner>
+    <notification-banner type="error" message="Payment failed. Please try again."></notification-banner>
+  </div>
+
+  <div class="demo-section">
+    <h2>Stat Card</h2>
+    <div class="row">
+      <stat-card label="Users" value="1,234" icon="👤" color="#1a8917"></stat-card>
+      <stat-card label="Orders" value="567" icon="🛒" color="#0057b8"></stat-card>
+      <stat-card label="Revenue" value="$12,345" icon="💰" color="#f39c12"></stat-card>
+    </div>
+  </div>
+</body>
+</html>
