@@ -61,6 +61,7 @@ app.get('/ssr/user-profile', async (req, res) => {
       </user-profile>
     `);
   } catch (err) {
+    console.log(err)
     res.status(500).send('<div>Failed to fetch user data</div>');
   }
 });
